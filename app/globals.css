@@ -18,16 +18,55 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #333;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.font_cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font_gowun_dodum {
+  font-family: var(--font-gowun-dodum);
+}
+
+.font_mrs-saint-delafield {
+  font-family: var(--font-mrs-saint-delafield);
+}
+
+.font_parisienne {
+  font-family: var(--font-parisienne);
+}
+
+.inter {
+  font-family: var(--font-inter);
+}
+.cal-heart {
+  position: relative;
+  overflow: hidden;
+}
+.cal-heart:before,
+.cal-heart:after {
+  content: '';
+  position: absolute;
+  top: 7%;
+  width: 50%;
+  height: 95%;
+  background: #d099a1;
+  border-radius: 80px 80px 10px 10px;
+}
+.cal-heart:before {
+  left: 50%;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.cal-heart:after {
+  left: 0%;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
 }
