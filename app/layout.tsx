@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { cormorant, gowun_dodum, inter, mrs_saint_delafield, parisienne } from './fonts';
+import { cormorant, gowun_dodum, inter, mrs_saint_delafield, parisienne, pixelify_sans } from './fonts';
 
 export const metadata: Metadata = {
   title: '유하진 ❤️ 이등록',
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light">
       <body
-        className={`${inter.variable} ${cormorant.variable} ${gowun_dodum.variable} ${mrs_saint_delafield.variable} ${parisienne.variable}`}
+        className={`${inter.variable} ${cormorant.variable} ${gowun_dodum.variable} ${mrs_saint_delafield.variable} ${parisienne.variable} ${pixelify_sans.variable}`}
       >
         {children}
       </body>

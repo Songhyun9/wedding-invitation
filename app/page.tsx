@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
 
   React.useEffect(() => {
     setTimeout(() => {
-      router.push('/main');
+      // router.push('/main');
     }, 2000);
   }, []);
 
@@ -17,6 +17,15 @@ const HomePage: React.FC = () => {
         <div className="love"></div>
         <div className="groom"></div>
         <div className="bride"></div>
+        <div
+          onClick={() => {
+            router.push('/main');
+            console.log('click');
+          }}
+          className="absolute w-[200px] h-[140px] mb-28 cursor-pointer"
+        ></div>
+        <p className="absolute text-2xl font-bold font_pixelify_sans mb-24 ml-44">{'< click!'}</p>
+        <p className="absolute text-7xl font-bold font_pixelify_sans mb-[400px]">10.26</p>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Inter, Cormorant, Gowun_Dodum, Mrs_Saint_Delafield, Parisienne } from 'next/font/google';
+import { Inter, Cormorant, Gowun_Dodum, Mrs_Saint_Delafield, Parisienne, Pixelify_Sans } from 'next/font/google';
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -30,5 +30,11 @@ export const parisienne = Parisienne({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-parisienne',
+  display: 'swap',
+});
+
+export const pixelify_sans = Pixelify_Sans({
+  subsets: ['latin'],
+  variable: '--font-pixelify-sans',
   display: 'swap',
 });

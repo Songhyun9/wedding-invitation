@@ -21,12 +21,12 @@ export default function Home() {
           ))}
         </p>
         <p className="font_gowun_dodum text-center mt-3 tracking-[.15em] flex justify-center items-center">
-          유하진 <span className="text-xs px-2.5">|</span> 이등록
+          이등록 <span className="text-xs px-2.5">|</span>유하진
         </p>
         <div className="my-12 w-fit mx-auto relative flex p-4 shadow-[1.5px_2.6px_8.8px_0.2px_rgba(54,54,54,0.15)]">
           <Image width={320} height={400} src={'/main.webp'} alt="main" />
         </div>
-        <p className="font_mrs-saint-delafield text-3xl w-full text-center">Deungrok and Hajin</p>
+        {/* <p className="font_mrs-saint-delafield text-3xl w-full text-center">Deungrok and Hajin</p> */}
         <p className=" leading-8 font_gowun_dodum w-full text-center pt-6 pb-6">
           2024년 10월 26일 토요일 오후 0시 00분
           <br />
@@ -35,7 +35,7 @@ export default function Home() {
         <CircleTop />
         <div className="bg-[#f9f9f9]">
           <div className=" animate-fade-up animate-once animate-ease-linear py-10 flex flex-col justify-center gap-10">
-            <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center">Invites you</p>
+            {/* <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center">Invites you</p> */}
             <p className="font_gowun_dodum text-center leading-8">
               사랑하는 두 사람이 같은 곳을 바라보며
               <br />
