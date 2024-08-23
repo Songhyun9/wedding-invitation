@@ -10,6 +10,7 @@ import { MasonryGallery } from '../components/MasonryGallery';
 import { useState } from 'react';
 import ContactModal from '../components/ContactModal';
 import { LocationMap } from '../components/LocationMap';
+import { TransportationInfo } from '../components/TransportationInfo';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -117,6 +118,7 @@ export default function Home() {
         <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         <div>
           <LocationMap />
+          <TransportationInfo />
         </div>
       </div>
     </main>
