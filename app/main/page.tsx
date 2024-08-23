@@ -28,36 +28,44 @@ export default function Home() {
         </div>
         {/* <p className="font_mrs-saint-delafield text-3xl w-full text-center">Deungrok and Hajin</p> */}
         <p className=" leading-8 font_gowun_dodum w-full text-center pt-6 pb-6">
-          2024년 10월 26일 토요일 오후 0시 00분
+          2024년 10월 26일 토요일 오후 12시
           <br />
-          위치와 장소
+          분당소망교회
         </p>
         <CircleTop />
         <div className="bg-[#f9f9f9]">
           <div className=" animate-fade-up animate-once animate-ease-linear py-10 flex flex-col justify-center gap-10">
             {/* <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center">Invites you</p> */}
             <p className="font_gowun_dodum text-center leading-8">
-              사랑하는 두 사람이 같은 곳을 바라보며
+              1년여의 짧은 시간 <br />
+              서로의 삶에 대한 태도와 마음가짐,
               <br />
-              평생 함께 걷고자 합니다.
+              열정을 보았습니다.
+              <br />
+              그로인해 함께 이뤄나갈 가정에 대한 기대와 꿈이 생겼습니다.
             </p>
 
             <p className="font_gowun_dodum text-center leading-8">
-              저희 동행의 첫걸음에 함께 하시어
+              두 사람이 하나가 되는 축복된 이 날,
               <br />
-              아름답고 행복한 가정을 가꾸어 나갈 수 있도록
-              <br />
-              축복해 주십시오.
+              소중한 여러분들이 자리를 빛내어 주시기를 바랍니다.
             </p>
 
             <p className="font_gowun_dodum text-center leading-8">
-              <span className="text-black font-semibold">아버지</span> ·{' '}
-              <span className="text-black font-semibold">어머니</span> 의 <span className="min-w-4">아들</span>{' '}
-              <span className="text-black font-semibold">등록</span>
+              새 출발하는 저희 부부의 증인이 되어
               <br />
-              <span className="text-black font-semibold">아버지</span> ·{' '}
-              <span className="text-black font-semibold">어머니</span> 의 <span className="pl-1">딸</span>{' '}
-              <span className="text-black font-semibold">하진</span>
+              기쁨과 사랑으로 축복해주시면
+              <br />큰 힘이 될 것입니다.
+            </p>
+
+            <p className="font_gowun_dodum text-center leading-8">
+              <span className="text-black font-semibold">故이일성</span> ·{' '}
+              <span className="text-black font-semibold">최재숙</span> 의 <span className="min-w-4">장남</span>{' '}
+              <span className="text-black font-semibold">이등록</span>
+              <br />
+              <span className="text-black font-semibold">유종표</span> ·{' '}
+              <span className="text-black font-semibold">송경란</span> 의 <span className="pl-1">차녀</span>{' '}
+              <span className="text-black font-semibold">유하진</span>
               <br />
             </p>
           </div>

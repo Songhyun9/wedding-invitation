@@ -15,9 +15,7 @@ const Calendar: React.FC = () => {
     <div className="mt-10 mb-16">
       <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center pb-10">Calendar</p>
       <div className="flex flex-col items-center">
-        <p className="font_gowun_dodum text-center mb-10 text-black font-semibold">
-          2024년 10월 26일 토요일 오후 0시 00분
-        </p>
+        <p className="font_gowun_dodum text-center mb-10 text-black font-semibold">2024년 10월 26일 토요일 오후 12시</p>
         <table className="border-collapse w-[355px] font_gowun_dodum ">
           <thead>
             <tr>
@@ -55,7 +53,7 @@ const Calendar: React.FC = () => {
                       </div>
                     )}
                     {date === 26 && (
-                      <div className="text-xs mt-1 ml-[-10px] absolute z-10 text-[#d099a1]">오후 0:00</div>
+                      <div className="text-xs mt-1 ml-[-10px] absolute z-10 text-[#d099a1]">오후 12:00</div>
                     )}
                   </td>
                 ))}

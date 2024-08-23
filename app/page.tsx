@@ -7,8 +7,8 @@ const HomePage: React.FC = () => {
 
   React.useEffect(() => {
     setTimeout(() => {
-      // router.push('/main');
-    }, 2000);
+      router.push('/main');
+    }, 5000);
   }, []);
 
   return (
@@ -20,7 +20,6 @@ const HomePage: React.FC = () => {
         <div
           onClick={() => {
             router.push('/main');
-            console.log('click');
           }}
           className="absolute w-[200px] h-[140px] mb-28 cursor-pointer"
         ></div>
