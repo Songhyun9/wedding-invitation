@@ -99,7 +99,7 @@ export default function Home() {
 
             <div className="flex items-center justify-center">
               <button
-                className="p-3 text-sm border-solid font_gowun_dodum border-[#e5e5e5] border min-w-36"
+                className="p-3 text-sm border-solid font_gowun_dodum border-[#e5e5e5] border min-w-36 rounded-sm bg-white"
                 onClick={() => setIsModalOpen(true)}
               >
                 연락하기
@@ -111,7 +111,6 @@ export default function Home() {
         <div>
           <Calendar />
         </div>
-
         <div>
           <MasonryGallery images={images} />
         </div>
