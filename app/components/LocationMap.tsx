@@ -60,7 +60,7 @@ export const LocationMap = () => {
           width: '100%',
           height: '350px',
         }}
-        level={3}
+        level={4}
       >
         <MapMarker
           position={{

@@ -13,6 +13,7 @@ import { LocationMap } from '../components/LocationMap';
 import { TransportationInfo } from '../components/TransportationInfo';
 import { Rsvp } from '../components/Rsvp';
 import { Information } from '../components/Information';
+import { Account } from '../components/Account';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -128,7 +129,11 @@ export default function Home() {
           <Rsvp />
         </div>
         <div>
-          <Information/>
+          <Information />
+        </div>
+        <CircleTop />
+        <div className="bg-[#f9f9f9]">
+          <Account />
         </div>
       </div>
     </main>

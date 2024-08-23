@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 
 export const Information = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
-
   return (
     <div className="pt-10 mb-16 flex flex-col gap-10 font_gowun_dodum">
       <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center">Information</p>
