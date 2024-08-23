@@ -8,9 +8,19 @@ export function useAudio(src: string) {
     audioRef.current = new Audio(src);
     audioRef.current.load();
 
+    // 오디오 로드가 완료되면 자동 재생
+    audioRef.current.addEventListener('canplaythrough', () => {
+      setIsPlaying(true);
+      audioRef.current?.play().catch((error: any) => {
+        console.error('Audio autoplay failed:', error);
+        setIsPlaying(false);
+      });
+    });
+
     return () => {
       if (audioRef.current) {
         audioRef.current.pause();
+        audioRef.current.removeEventListener('canplaythrough', () => {});
         audioRef.current = null;
       }
     };

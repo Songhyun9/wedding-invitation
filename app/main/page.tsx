@@ -1,15 +1,39 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 import CircleTop from '../components/CircleTop';
 import { useAudio } from '../hooks/useAudio';
 import AudioControl from '../components/AudioControl';
 import CircleBottom from '../components/CircleBottom';
 import Calendar from '../components/Calendar';
+import { MasonryGallery } from '../components/MasonryGallery';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
+
+  const images = [
+    { src: '/gallery/1.webp', alt: 'wedding1' },
+    { src: '/gallery/2.webp', alt: 'wedding2' },
+    { src: '/gallery/3.webp', alt: 'wedding3' },
+    { src: '/gallery/4.webp', alt: 'wedding4' },
+    { src: '/gallery/5.webp', alt: 'wedding5' },
+    { src: '/gallery/6.webp', alt: 'wedding6' },
+    { src: '/gallery/7.webp', alt: 'wedding7' },
+    { src: '/gallery/8.webp', alt: 'wedding8' },
+    { src: '/gallery/9.webp', alt: 'wedding9' },
+    { src: '/gallery/10.webp', alt: 'wedding10' },
+    { src: '/gallery/11.webp', alt: 'wedding11' },
+    { src: '/gallery/12.webp', alt: 'wedding12' },
+    { src: '/gallery/13.webp', alt: 'wedding13' },
+    { src: '/gallery/14.webp', alt: 'wedding14' },
+    { src: '/gallery/15.webp', alt: 'wedding15' },
+    { src: '/gallery/16.webp', alt: 'wedding16' },
+    { src: '/gallery/17.webp', alt: 'wedding17' },
+    { src: '/gallery/18.webp', alt: 'wedding18' },
+    { src: '/gallery/19.webp', alt: 'wedding19' },
+    { src: '/gallery/20.webp', alt: 'wedding20' },
+    { src: '/gallery/21.webp', alt: 'wedding21' },
+  ];
 
   return (
     <main className="min-h-screen bg-[#333]">
@@ -73,6 +97,10 @@ export default function Home() {
         </div>
         <div>
           <Calendar />
+        </div>
+
+        <div>
+          <MasonryGallery images={images} />
         </div>
       </div>
     </main>

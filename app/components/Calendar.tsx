@@ -35,10 +35,6 @@ const Calendar: React.FC = () => {
                     className={cn('p-2.5 py-5 text-center', {
                       'text-[#d099a1] relative': dateIndex === 0,
                     })}
-                    // className={`p-2 text-center relative
-                    //   ${date === 22 ? 'cal-heart text-white' : ''}
-                    //   ${dateIndex === 0 ? 'text-[#d099a1]' : ''}
-                    // `}
                   >
                     <span
                       className={cn('relative z-10', {
