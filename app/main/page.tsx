@@ -7,9 +7,12 @@ import AudioControl from '../components/AudioControl';
 import CircleBottom from '../components/CircleBottom';
 import Calendar from '../components/Calendar';
 import { MasonryGallery } from '../components/MasonryGallery';
+import { useState } from 'react';
+import ContactModal from '../components/ContactModal';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
     { src: '/gallery/1.webp', alt: 'wedding1' },
@@ -92,6 +95,15 @@ export default function Home() {
               <span className="text-black font-semibold">유하진</span>
               <br />
             </p>
+
+            <div className="flex items-center justify-center">
+              <button
+                className="p-3 text-sm border-solid font_gowun_dodum border-[#e5e5e5] border min-w-36"
+                onClick={() => setIsModalOpen(true)}
+              >
+                연락하기
+              </button>
+            </div>
           </div>
           <CircleBottom />
         </div>
@@ -102,6 +114,7 @@ export default function Home() {
         <div>
           <MasonryGallery images={images} />
         </div>
+        <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </main>
   );
