@@ -11,6 +11,7 @@ import { useState } from 'react';
 import ContactModal from '../components/ContactModal';
 import { LocationMap } from '../components/LocationMap';
 import { TransportationInfo } from '../components/TransportationInfo';
+import { Rsvp } from '../components/Rsvp';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -120,6 +121,10 @@ export default function Home() {
         <div className="bg-[#f9f9f9]">
           <LocationMap />
           <TransportationInfo />
+          <CircleBottom />
+        </div>
+        <div>
+          <Rsvp />
         </div>
       </div>
     </main>

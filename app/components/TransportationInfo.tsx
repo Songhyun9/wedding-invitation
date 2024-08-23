@@ -3,7 +3,7 @@ import { Bus, Train, Car, ParkingSquare } from 'lucide-react';
 
 export const TransportationInfo: React.FC = () => {
   return (
-    <div className="px-10 font_gowun_dodum">
+    <div className="px-10 pb-4 font_gowun_dodum">
       <Section icon={<Bus size={24} />} title="버스">
         <hr className="border-t border-dashed mb-2" />
         <SubSection title="장안타운입구.한신빌라 정류장 하차 후 도보 10분 거리">

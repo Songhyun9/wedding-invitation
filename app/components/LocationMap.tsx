@@ -36,7 +36,7 @@ export const LocationMap = () => {
 
       <hr className="border-t border-dashed " />
 
-      <p className="font_gowun_dodum w-full text-center  ">
+      <p className="font_gowun_dodum w-full text-center leading-8">
         {address} <br />
         분당소망교회
       </p>
