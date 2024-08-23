@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Image {
   src: string;
@@ -10,6 +11,8 @@ interface MasonryGalleryProps {
 }
 
 export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
   const groupedImages = images.reduce((acc, image, index) => {
     const groupIndex = Math.floor(index / 3);
     if (!acc[groupIndex]) {
@@ -18,6 +21,23 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
     acc[groupIndex].push(image);
     return acc;
   }, [] as Image[][]);
+
+  const openCarousel = (groupIndex: number, imageIndex: number) => {
+    setSelectedImageIndex(groupIndex * 3 + imageIndex);
+  };
+
+  const closeCarousel = () => {
+    setSelectedImageIndex(null);
+  };
+
+  const navigateCarousel = (direction: 'prev' | 'next') => {
+    if (selectedImageIndex === null) return;
+    const newIndex =
+      direction === 'prev'
+        ? (selectedImageIndex - 1 + images.length) % images.length
+        : (selectedImageIndex + 1) % images.length;
+    setSelectedImageIndex(newIndex);
+  };
 
   return (
     <div className="mt-10 mb-16">
@@ -31,13 +51,33 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
                   key={`${groupIndex}-${imageIndex}`}
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover cursor-pointer"
+                  onClick={() => openCarousel(groupIndex, imageIndex)}
                 />
               ))}
             </div>
           ))}
         </div>
       </div>
+
+      {selectedImageIndex !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <button className="absolute top-4 right-4 text-white" onClick={closeCarousel}>
+            <X size={24} />
+          </button>
+          <button className="absolute left-4 text-white" onClick={() => navigateCarousel('prev')}>
+            <ChevronLeft size={48} />
+          </button>
+          <img
+            src={images[selectedImageIndex].src}
+            alt={images[selectedImageIndex].alt}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+          />
+          <button className="absolute right-4 text-white" onClick={() => navigateCarousel('next')}>
+            <ChevronRight size={48} />
+          </button>
+        </div>
+      )}
     </div>
   );
 };
