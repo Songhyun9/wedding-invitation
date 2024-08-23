@@ -4,11 +4,16 @@ import { useRouter } from 'next/navigation';
 
 const HomePage: React.FC = () => {
   const router = useRouter();
+  const [showClick, setShowClick] = React.useState(false);
 
   React.useEffect(() => {
     setTimeout(() => {
       router.push('/main');
-    }, 5000);
+    }, 7000);
+
+    setTimeout(() => {
+      setShowClick(true);
+    }, 3500);
   }, []);
 
   return (
@@ -23,7 +28,7 @@ const HomePage: React.FC = () => {
           }}
           className="absolute w-[200px] h-[140px] mb-28 cursor-pointer"
         ></div>
-        <p className="absolute text-2xl font-bold font_pixelify_sans mb-24 ml-44">{'< click!'}</p>
+        {showClick && <p className="absolute text-2xl font-bold font_pixelify_sans mb-24 ml-44">{'< click!'}</p>}
         <p className="absolute text-7xl font-bold font_pixelify_sans mb-[400px]">10.26</p>
       </div>
     </div>
