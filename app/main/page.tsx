@@ -116,7 +116,8 @@ export default function Home() {
           <MasonryGallery images={images} />
         </div>
         <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-        <div>
+        <CircleTop />
+        <div className="bg-[#f9f9f9]">
           <LocationMap />
           <TransportationInfo />
         </div>

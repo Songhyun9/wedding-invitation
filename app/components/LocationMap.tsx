@@ -29,7 +29,7 @@ export const LocationMap = () => {
   };
 
   return (
-    <div className="mt-10 mb-16 px-10 flex flex-col gap-10">
+    <div className="pt-10 mb-16 px-10 flex flex-col gap-10">
       <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center ">Location</p>
 
       <p className="font_gowun_dodum font-extrabold text-lg w-full text-center ">오시는 길</p>
