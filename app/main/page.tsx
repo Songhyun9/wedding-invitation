@@ -9,6 +9,7 @@ import Calendar from '../components/Calendar';
 import { MasonryGallery } from '../components/MasonryGallery';
 import { useState } from 'react';
 import ContactModal from '../components/ContactModal';
+import { LocationMap } from '../components/LocationMap';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -115,6 +116,9 @@ export default function Home() {
           <MasonryGallery images={images} />
         </div>
         <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <div>
+          <LocationMap />
+        </div>
       </div>
     </main>
   );
