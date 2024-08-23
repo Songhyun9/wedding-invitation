@@ -12,6 +12,7 @@ import ContactModal from '../components/ContactModal';
 import { LocationMap } from '../components/LocationMap';
 import { TransportationInfo } from '../components/TransportationInfo';
 import { Rsvp } from '../components/Rsvp';
+import { Information } from '../components/Information';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -125,6 +126,9 @@ export default function Home() {
         </div>
         <div>
           <Rsvp />
+        </div>
+        <div>
+          <Information/>
         </div>
       </div>
     </main>
