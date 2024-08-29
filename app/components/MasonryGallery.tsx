@@ -51,12 +51,8 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
                   key={`${groupIndex}-${imageIndex}`}
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover cursor-pointer"
+                  className="h-full object-cover cursor-pointer w-[100px]"
                   onClick={() => openCarousel(groupIndex, imageIndex)}
-                  style={{
-                    maxWidth: '100%',
-                    maxHeight: '100%',
-                  }}
                 />
               ))}
             </div>
