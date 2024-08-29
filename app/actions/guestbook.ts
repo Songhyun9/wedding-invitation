@@ -8,8 +8,6 @@ export async function submitGuestbookEntry(formData: { name: string; content: st
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit',
     });
     const rowData = [formData.name, formData.content, date];
     await writeToGoogleSheetBook(rowData);
