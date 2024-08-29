@@ -51,7 +51,7 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
                   key={`${groupIndex}-${imageIndex}`}
                   src={image.src}
                   alt={image.alt}
-                  className="h-full object-cover cursor-pointer w-[100px]"
+                  className="h-full object-cover cursor-pointer w-full min-h-hull"
                   onClick={() => openCarousel(groupIndex, imageIndex)}
                 />
               ))}
