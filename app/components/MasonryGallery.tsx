@@ -39,6 +39,8 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
     setSelectedImageIndex(newIndex);
   };
 
+  console.log('hi');
+
   return (
     <div className="mt-10 mb-16">
       <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center pb-10">Gallery</p>
