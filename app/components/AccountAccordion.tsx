@@ -8,7 +8,7 @@ export const AccountAccordion = () => {
         <div className="collapse-title font-medium border-b border-base-300">신랑측</div>
         <div className="collapse-content peer-checked:bg-white">
           <div className="flex flex-col gap-4 pt-4">
-            <AccountItem name="신랑 이등록" relation="카카오뱅크" account="3333-07-5666929" />
+            <AccountItem name="신랑 이등록" relation="하나은행" account="43991063425407" />
             <AccountItem name="어머니 최재숙" relation="농협" account="1711-2056-066227" />
           </div>
         </div>

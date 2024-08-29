@@ -74,7 +74,7 @@ export default function Home() {
               <br />
               열정을 보았습니다.
               <br />
-              그로인해 함께 이뤄나갈 가정에 대한 기대와 꿈이 생겼습니다.
+              그로인해 함께 이뤄나갈 가정에 대한 <br /> 기대와 꿈이 생겼습니다.
             </p>
 
             <p className="font_gowun_dodum text-center leading-8">
@@ -95,7 +95,7 @@ export default function Home() {
               <span className="text-black font-semibold">최재숙</span> 의 <span className="min-w-4">장남</span>{' '}
               <span className="text-black font-semibold">이등록</span>
               <br />
-              <span className="text-black font-semibold">유종표</span> ·{' '}
+              <span className="text-black font-semibold ml-2">유종표</span> ·{' '}
               <span className="text-black font-semibold">송경란</span> 의 <span className="pl-1">차녀</span>{' '}
               <span className="text-black font-semibold">유하진</span>
               <br />
