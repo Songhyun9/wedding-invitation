@@ -14,6 +14,7 @@ import { TransportationInfo } from '../components/TransportationInfo';
 import { Rsvp } from '../components/Rsvp';
 import { Information } from '../components/Information';
 import { Account } from '../components/Account';
+import GuestBook from '../components/GuestBook';
 
 export default function Home() {
   const { isPlaying, handlePlayPause } = useAudio('/music.mp3');
@@ -134,6 +135,10 @@ export default function Home() {
         <CircleTop />
         <div className="bg-[#f9f9f9]">
           <Account />
+          <CircleBottom />
+        </div>
+        <div>
+          <GuestBook />
         </div>
       </div>
     </main>
