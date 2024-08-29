@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface Image {
@@ -39,23 +40,24 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
     setSelectedImageIndex(newIndex);
   };
 
-  console.log('hi');
-
   return (
     <div className="mt-10 mb-16">
       <p className="font_parisienne text-[#d099a1] tracking-[.20em] text-center pb-10">Gallery</p>
       <div className="relative h-[500px] overflow-x-auto overflow-y-hidden">
         <div className="flex gap-4 p-4">
           {groupedImages.map((group, groupIndex) => (
-            <div key={groupIndex} className="grid grid-cols-1 gap-2 min-w-[100px]">
+            <div key={groupIndex} className="grid grid-cols-1 gap-2 min-w-[100px] h-[500px]">
               {group.map((image, imageIndex) => (
-                <img
-                  key={`${groupIndex}-${imageIndex}`}
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-full object-cover cursor-pointer w-full min-h-hull"
-                  onClick={() => openCarousel(groupIndex, imageIndex)}
-                />
+                <div key={`${groupIndex}-${imageIndex}`} className="relative w-full h-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    layout="fill"
+                    objectFit="cover"
+                    className="cursor-pointer"
+                    onClick={() => openCarousel(groupIndex, imageIndex)}
+                  />
+                </div>
               ))}
             </div>
           ))}
@@ -70,11 +72,14 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
           <button className="absolute left-4 text-white" onClick={() => navigateCarousel('prev')}>
             <ChevronLeft size={48} />
           </button>
-          <img
-            src={images[selectedImageIndex].src}
-            alt={images[selectedImageIndex].alt}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-          />
+          <div className="relative w-[90vw] h-[90vh]">
+            <Image
+              src={images[selectedImageIndex].src}
+              alt={images[selectedImageIndex].alt}
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
           <button className="absolute right-4 text-white" onClick={() => navigateCarousel('next')}>
             <ChevronRight size={48} />
           </button>
