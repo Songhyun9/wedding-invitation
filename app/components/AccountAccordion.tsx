@@ -19,6 +19,8 @@ export const AccountAccordion = () => {
         <div className="collapse-content peer-checked:bg-white">
           <div className="flex flex-col gap-4 pt-4">
             <AccountItem name="신부 유하진" relation="국민" account="98893453445" />
+            <AccountItem name="아버지 유종표" relation="국민" account="265-24-0069-622" />
+            <AccountItem name="어머니 송경란" relation="하나" account="24218-21483-1" />
           </div>
         </div>
       </div>
