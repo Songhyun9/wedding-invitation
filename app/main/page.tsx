@@ -42,6 +42,33 @@ export default function Home() {
     { src: '/gallery/19.webp', alt: 'wedding19' },
     { src: '/gallery/20.webp', alt: 'wedding20' },
     { src: '/gallery/21.webp', alt: 'wedding21' },
+    { src: '/gallery/22.webp', alt: 'wedding22' },
+    { src: '/gallery/23.webp', alt: 'wedding23' },
+    { src: '/gallery/24.webp', alt: 'wedding24' },
+    { src: '/gallery/25.webp', alt: 'wedding25' },
+    { src: '/gallery/26.webp', alt: 'wedding26' },
+    { src: '/gallery/27.webp', alt: 'wedding27' },
+    { src: '/gallery/28.webp', alt: 'wedding28' },
+    { src: '/gallery/29.webp', alt: 'wedding29' },
+    { src: '/gallery/30.webp', alt: 'wedding30' },
+    { src: '/gallery/31.webp', alt: 'wedding31' },
+    { src: '/gallery/32.webp', alt: 'wedding32' },
+    { src: '/gallery/33.webp', alt: 'wedding33' },
+    { src: '/gallery/34.webp', alt: 'wedding34' },
+    { src: '/gallery/35.webp', alt: 'wedding35' },
+    { src: '/gallery/36.webp', alt: 'wedding36' },
+    { src: '/gallery/37.webp', alt: 'wedding37' },
+    { src: '/gallery/38.webp', alt: 'wedding38' },
+    { src: '/gallery/39.webp', alt: 'wedding39' },
+    { src: '/gallery/40.webp', alt: 'wedding40' },
+    { src: '/gallery/41.webp', alt: 'wedding41' },
+    { src: '/gallery/42.webp', alt: 'wedding42' },
+    { src: '/gallery/43.webp', alt: 'wedding43' },
+    { src: '/gallery/44.webp', alt: 'wedding44' },
+    { src: '/gallery/45.webp', alt: 'wedding45' },
+    { src: '/gallery/46.webp', alt: 'wedding46' },
+    { src: '/gallery/47.webp', alt: 'wedding47' },
+    { src: '/gallery/48.webp', alt: 'wedding48' },
   ];
 
   return (
@@ -117,7 +144,12 @@ export default function Home() {
           <Calendar />
         </div>
         <div>
-          <MasonryGallery images={images} />
+          <MasonryGallery
+            images={images
+              .map((value) => ({ value, sort: Math.random() }))
+              .sort((a, b) => a.sort - b.sort)
+              .map(({ value }) => value)}
+          />
         </div>
         <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         <CircleTop />

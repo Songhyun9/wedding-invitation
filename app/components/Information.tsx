@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 export const Information = () => {
   return (
@@ -9,6 +10,9 @@ export const Information = () => {
         교회 로비 공간이 협소하여 화환은 정중히 사양합니다. <br />
         신부대기실 옆에 포토부스가 설치될 예정이니
         <br /> 좋은 추억 남기고 가시길 바랍니다
+        <div className="w-full flex justify-center mt-10">
+          <Image width={100} height={100} src={'/photobooth.webp'} alt="main" />
+        </div>
       </p>
     </div>
   );
