@@ -69,9 +69,6 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
           <button className="absolute top-4 right-4 text-white" onClick={closeCarousel}>
             <X size={24} />
           </button>
-          <button className="absolute left-4 text-white" onClick={() => navigateCarousel('prev')}>
-            <ChevronLeft size={48} />
-          </button>
           <div className="relative w-[90vw] h-[90vh]">
             <Image
               src={images[selectedImageIndex].src}
@@ -80,7 +77,10 @@ export const MasonryGallery: React.FC<MasonryGalleryProps> = ({ images }) => {
               objectFit="contain"
             />
           </div>
-          <button className="absolute right-4 text-white" onClick={() => navigateCarousel('next')}>
+          <button className="absolute left-4 text-white z-50" onClick={() => navigateCarousel('prev')}>
+            <ChevronLeft size={48} />
+          </button>
+          <button className="absolute right-4 text-white z-50" onClick={() => navigateCarousel('next')}>
             <ChevronRight size={48} />
           </button>
         </div>
